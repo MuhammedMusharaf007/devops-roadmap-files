@@ -1,0 +1,131 @@
+Layer 1 Devices:
+OSI Model - 7 Layers
+discuss bottom 3 layers - 1,2,3
+
+Layer 1
+	Analog modem
+		modem = modulator + demodulator
+		TO create connection between networks
+		Single connection - concerned about the wire
+		wire : on physical layerr - layer 1 of OSI
+	
+	HUB
+		Concentrator/Repeater
+		have few/many ports
+		Uncommon now a days
+
+
+Layer 2
+	Switch
+		ASIC - Application Specific integrated  Circuit
+		Communicate only with local network devices
+	
+	Wireless access points (WAP)
+		Connects wireless network segments with wired ones
+		Comm, with local network devices.
+	
+Layer 3
+	Multilayer switch
+		Normal layer -> Network switching services
+		uses ASIC for switching (this ASIC can route : so non local as well)
+		highly programmable.
+		Not very common -> expensive
+	
+	Router
+		most common
+		OSI Model layer 3 logical network info
+		uses software programming
+		Local and non local device comm.
+	
+Security Network Devices
+------------------------
+	Firewall
+		PLaced on routers or hosts(software based)
+		Multiple layers of OSI models can have firewalls
+		Blocking packets
+		Two methods
+			Stateless inspection
+				examine every packet against every set of rule and enforces
+			stateful inspection
+				only examine state of a connection between networks
+				(mainly between internal and external connection)
+				:General rule: External networks are not allowed to be initiated by
+				internal networks.
+		First line of defense : Police wall
+	
+	IDS (intrusion detection system)
+		detecting attack or breach
+		use log files or txt or emails to get to network admin
+		Standards
+			Signature based
+				evaluate network traffic for known malware or attack signatures
+			Anomaly based
+				evaluate for suspicious changes
+			policy based
+				specific declared suspicious policy
+		IDS deployed in a host level is called an HIDS (Host based Intrusion Detection System)
+		
+	IPS (Intrusion Prevention system)
+		stop a breach or attack
+		perform set of actions and inform network admin
+		all traffic flow through IPS
+		Standards are same as IDS
+		Best placement : Between router and destination segment
+		Active responses
+			Block offending IP Address
+			Close down vulnerable interfaces
+			terminate network sessions
+			Redirect attacks
+			...more
+			
+	VPN Concentrator
+		Provide proper tunneling and encryption depending on VPN connections
+		Layer 2, layer3 and layer7
+		Internet transactions (SSL VPN at layer7)
+			Most concentrators work at layer3 of OSI, giving IPSec encryption via secure tunnel
+
+Optimisation and Performance devices
+-------------------------------------
+	Load balancer
+		AKA content switch or contenct filter
+		load balance between multiple hosts that contain the same data
+		Requests are dist to server farms to ensure no server gets overloaded.
+	
+	Proxy Servers
+		Requests resources on the behalf of client machines
+		retrieve networks from untrusted outside networks for the requesting clients.
+		Hidden identity and protection of the clients
+		filtering the content that is available to the client
+		COmmonly requested webpages are cached for improved network performance
+	
+Basics of the Virtual Private Network
+-------------------------------------
+	VPN 
+		helps remote hosts to connect to private network through a private tunnel 
+		using a public network
+		The private network sees the remote host is considered a local host
+		even though the connection passes through many routers and systems, it is seen 
+		by each as a direct connection
+		Helps is reducing costs for organisations, since we dont need a leased line to create
+		the connection.
+	
+	VPN Types
+		Site to site VPNs
+			Here a remote site's network is connected to a main site's network
+			and seen as a local network segment
+			the VPN concentrators on both sides will manage the connections
+		Host to site VPNs (Remote Access VPNs)
+			Remote users use to connect to local networks
+			VPN concentrators on the local network controls the connection
+			Remote hosts use VPN Client softwares.
+		Host to Host VPNs
+			Between two computers without a VPN client software
+			VPN concentrator on the local network control the connection
+			The host1 connect using the webbrowser which supports encryption tech like SSL/TLS
+			to connect to VPN Concentrator.
+	
+	Protocols used by the VPNs
+			Internet Protocol Security(IPSec)
+				
+		
+			
